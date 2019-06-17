@@ -50,6 +50,7 @@ describe("WatchTestCases", () => {
 	const casesPath = path.join(__dirname, "watchCases");
 	let categories = fs.readdirSync(casesPath);
 
+	categories = categories.filter(cat => cat === "context");
 	categories = categories.map(cat => {
 		return {
 			name: cat,
